@@ -8,11 +8,10 @@ class InterestingDigits(object):
             while i*x < base**3:
                 mul = i*x
                 sum_of = InterestingDigits.sum_(self, mul, base)
-                print sum_of
+                
                 if (sum_of%i) != 0:
                     count += 1
-
-                x += 1
+                    x += 1
             if count == 0:
                 tup.append(i)
         return tuple(tup)
